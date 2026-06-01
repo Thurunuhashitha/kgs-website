@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="KGS Construction & Transport — Sri Lanka's trusted Grade C7 registered construction company specializing in road concreting, building construction, land development & heavy transport."/>
+  <meta name="keywords" content="construction Sri Lanka, road concreting, building construction, land development, heavy transport, excavator hire, KGS"/>
+  <title>KGS Construction & Transport | Sri Lanka's Trusted Builder</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet" crossorigin/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <img src="assets/logo.png" alt="KGS Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="logo-fallback" style="display:none">
+        <span class="logo-text">KGS</span>
+      </div>
+      <div class="nav-brand">
+        <span class="brand-main">KGS</span>
+        <span class="brand-sub">CONSTRUCTION & TRANSPORT</span>
+      </div>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#services">SERVICES</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#transport">TRANSPORT</a></li>
+      <li><a href="#excavator">EXCAVATOR</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <!-- Animated background -->
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-particles" id="heroParticles"></div>
+  </div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-fade-bottom" aria-hidden="true"></div>
+
+  <!-- Decorative floating rings -->
+  <div class="hero-ring hero-ring-1" aria-hidden="true"></div>
+  <div class="hero-ring hero-ring-2" aria-hidden="true"></div>
+  <div class="hero-ring hero-ring-3" aria-hidden="true"></div>
+
+  <!-- Two-column layout -->
+  <div class="hero-inner">
+
+    <!-- LEFT: Text Content -->
+    <div class="hero-left">
+      <div class="hero-badge" id="heroBadge">
+        <span class="badge-dot"></span>
+        QUALITY &middot; STRENGTH &middot; RELIABILITY
+      </div>
+
+      <h1 class="hero-title" id="heroTitle">
+        <span class="hero-word" id="hw1">BUILD</span>
+        <span class="hero-word hero-word-accent" id="hw2">BEYOND</span>
+        <span class="hero-word" id="hw3">LIMITS</span>
+      </h1>
+
+      <p class="hero-desc" id="heroDesc">
+        Sri Lanka's trusted <strong>Grade C7 certified</strong> construction &amp; transport company — delivering road concreting, building construction, land development, and heavy equipment solutions island-wide since 2018.
+      </p>
+
+      <div class="hero-ctas" id="heroCtas">
+        <a href="#projects" class="btn-primary">
+          <i class="fas fa-hard-hat"></i>
+          <span>VIEW PROJECTS</span>
+        </a>
+        <a href="#contact" class="btn-outline">
+          <span>GET A QUOTE</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Trust row -->
+      <div class="hero-trust" id="heroTrust">
+        <div class="trust-item">
+          <i class="fas fa-shield-alt"></i>
+          <span>ICTAD / CIDA Registered</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <i class="fas fa-map-marked-alt"></i>
+          <span>Island-Wide Operations</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <i class="fas fa-award"></i>
+          <span>Grade C7 Certified</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Stat cards -->
+    <div class="hero-right" id="heroRight" aria-hidden="true">
+      <div class="hero-card-grid">
+        <div class="hero-stat-card" id="hsc1">
+          <div class="hsc-icon"><i class="fas fa-calendar-check"></i></div>
+          <div class="hsc-num">7+</div>
+          <div class="hsc-label">Years of Excellence</div>
+        </div>
+        <div class="hero-stat-card hsc-accent" id="hsc2">
+          <div class="hsc-icon"><i class="fas fa-certificate"></i></div>
+          <div class="hsc-num">C7</div>
+          <div class="hsc-label">ICTAD Grade</div>
+        </div>
+        <div class="hero-stat-card hsc-accent" id="hsc3">
+          <div class="hsc-icon"><i class="fas fa-project-diagram"></i></div>
+          <div class="hsc-num">50+</div>
+          <div class="hsc-label">Projects Delivered</div>
+        </div>
+        <div class="hero-stat-card" id="hsc4">
+          <div class="hsc-icon"><i class="fas fa-headset"></i></div>
+          <div class="hsc-num">24/7</div>
+          <div class="hsc-label">Always Available</div>
+        </div>
+      </div>
+
+      <!-- Floating service tags -->
+      <div class="hero-tags">
+        <span class="hero-tag"><i class="fas fa-road"></i> Road Concreting</span>
+        <span class="hero-tag"><i class="fas fa-building"></i> Building Construction</span>
+        <span class="hero-tag"><i class="fas fa-tractor"></i> Excavator Hire</span>
+        <span class="hero-tag"><i class="fas fa-truck"></i> Sand Transport</span>
+      </div>
+    </div>
+
+  </div><!-- end hero-inner -->
+
+  <!-- Bottom marquee strip -->
+  <div class="hero-ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>ROAD CONCRETING</span>
+      <span class="tick-dot">◆</span>
+      <span>BUILDING CONSTRUCTION</span>
+      <span class="tick-dot">◆</span>
+      <span>LAND DEVELOPMENT</span>
+      <span class="tick-dot">◆</span>
+      <span>EXCAVATOR SERVICES</span>
+      <span class="tick-dot">◆</span>
+      <span>SAND &amp; GRAVEL TRANSPORT</span>
+      <span class="tick-dot">◆</span>
+      <span>GRADE C7 CERTIFIED</span>
+      <span class="tick-dot">◆</span>
+      <span>ROAD CONCRETING</span>
+      <span class="tick-dot">◆</span>
+      <span>BUILDING CONSTRUCTION</span>
+      <span class="tick-dot">◆</span>
+      <span>LAND DEVELOPMENT</span>
+      <span class="tick-dot">◆</span>
+      <span>EXCAVATOR SERVICES</span>
+      <span class="tick-dot">◆</span>
+      <span>SAND &amp; GRAVEL TRANSPORT</span>
+      <span class="tick-dot">◆</span>
+      <span>GRADE C7 CERTIFIED</span>
+      <span class="tick-dot">◆</span>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="hero-scroll-indicator">
+    <div class="scroll-line"></div>
+    <span>SCROLL</span>
+  </div>
+</section>
+
+<!-- ABOUT US -->
+<section id="about" class="section about-section">
+  <div class="container">
+    <div class="about-layout">
+
+      <!-- LEFT: Company Info -->
+      <div class="about-left">
+        <span class="section-tag">WHO WE ARE</span>
+        <h2 class="section-title" style="text-align:left;">ABOUT KGS</h2>
+        <div class="title-bar" style="margin:0 0 28px 0;"></div>
+
+        <p class="about-intro">KGS Construction & Transport is a <strong>Grade C7 registered construction company</strong> with over <strong>7 years of proven experience</strong> building Sri Lanka's infrastructure. Founded in 2018, we have grown from a local contractor into a trusted name across the island for road concreting, building construction, large-scale land development, and heavy transport.</p>
+
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <div class="hl-icon"><i class="fas fa-calendar-check"></i></div>
+            <div>
+              <strong>Established 2018</strong>
+              <span>7+ Years of Excellence</span>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="hl-icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <strong>Grade C7 Certified</strong>
+              <span>Registered Construction Company</span>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="hl-icon"><i class="fas fa-hard-hat"></i></div>
+            <div>
+              <strong>Experienced Team</strong>
+              <span>Skilled Workforce & Heavy Equipment</span>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="hl-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <div>
+              <strong>Island-wide Operations</strong>
+              <span>Projects Across Sri Lanka</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-c7-badge">
+          <div class="c7-inner">
+            <div class="c7-grade">C7</div>
+            <div class="c7-text">
+              <strong>ICTAD / CIDA Registered</strong>
+              <span>Grade C7 Construction Company</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Owners -->
+      <div class="about-right">
+        <span class="section-tag" style="display:block;margin-bottom:12px;">LEADERSHIP</span>
+        <h3 class="owners-title">OUR DIRECTORS</h3>
+        <div class="owners-grid">
+
+          <div class="owner-card reveal">
+            <div class="owner-img-wrap">
+              <img src="assets/owner/saman.png" 
+                onerror="this.src='';this.parentElement.classList.add('owner-img-fallback')"/>
+              <div class="owner-img-fallback-icon"><i class="fas fa-user"></i></div>
+            </div>
+            <div class="owner-info">
+              <div class="owner-name">Mr. Saman Priyantha Kumara</div>
+              <div class="owner-role">Founder & Director</div>
+              <p class="owner-desc">With over 15 years in the construction industry, Mr. Saman leads overall project management and client relations, ensuring every project meets the highest quality standards.</p>
+            </div>
+          </div>
+
+          <div class="owner-card reveal">
+            <div class="owner-img-wrap">
+              <img src="assets/owner/thurunu.png" 
+                onerror="this.src='';this.parentElement.classList.add('owner-img-fallback')"/>
+              <div class="owner-img-fallback-icon"><i class="fas fa-user"></i></div>
+            </div>
+            <div class="owner-info">
+              <div class="owner-name">Mr. Thurunu Hashitha</div>
+              <div class="owner-role">Director — Operations</div>
+              <p class="owner-desc">Mr. Thurunu oversees on-site operations and heavy equipment management, bringing technical expertise and precision to every construction project undertaken by KGS.</p>
+            </div>
+          </div>
+
+          <div class="owner-card reveal">
+            <div class="owner-img-wrap">
+              <img src="assets/owner/sakun.png" 
+                onerror="this.src='';this.parentElement.classList.add('owner-img-fallback')"/>
+              <div class="owner-img-fallback-icon"><i class="fas fa-user"></i></div>
+            </div>
+            <div class="owner-info">
+              <div class="owner-name">Mr. Sakun Barnuka</div>
+              <div class="owner-role">Director — Business Development</div>
+              <p class="owner-desc">Mr. Sakun drives the strategic growth of KGS, managing new project acquisitions, partnerships, and the company's transport and logistics division.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section services-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">WHAT WE DO</span>
+      <h2 class="section-title">OUR SERVICES</h2>
+      <div class="title-bar"></div>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card" data-cat="concrete">
+        <div class="service-icon-wrap">
+          <i class="fas fa-road"></i>
+        </div>
+        <div class="service-body">
+          <h3>Road Concreting</h3>
+          <p>Professional concrete road construction with precision grading, formwork, and high-strength mix design. We deliver durable roads built to last decades.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Rural & urban road projects</li>
+            <li><i class="fas fa-check"></i> High-strength concrete mix</li>
+            <li><i class="fas fa-check"></i> Drainage & side finishing</li>
+          </ul>
+          <a href="#projects" class="service-link" onclick="filterProjects('concrete')">SEE PROJECTS <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-num">01</div>
+      </div>
+
+      <div class="service-card" data-cat="building">
+        <div class="service-icon-wrap">
+          <i class="fas fa-building"></i>
+        </div>
+        <div class="service-body">
+          <h3>Building Construction</h3>
+          <p>From foundation to finish — residential, commercial, and industrial buildings crafted with structural integrity and modern design standards.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Residential & commercial</li>
+            <li><i class="fas fa-check"></i> Renovations & extensions</li>
+            <li><i class="fas fa-check"></i> Full project management</li>
+          </ul>
+          <a href="#projects" class="service-link" onclick="filterProjects('building')">SEE PROJECTS <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-num">02</div>
+      </div>
+
+      <div class="service-card" data-cat="land">
+        <div class="service-icon-wrap">
+          <i class="fas fa-layer-group"></i>
+        </div>
+        <div class="service-body">
+          <h3>Land Development</h3>
+          <p>Large-scale land clearing, filling, and leveling for housing schemes, industrial zones, and agricultural development projects.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Land clearing & grading</li>
+            <li><i class="fas fa-check"></i> Embankment & filling</li>
+            <li><i class="fas fa-check"></i> Housing scheme development</li>
+          </ul>
+          <a href="#projects" class="service-link" onclick="filterProjects('land')">SEE PROJECTS <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-num">03</div>
+      </div>
+
+      <div class="service-card" data-cat="transport">
+        <div class="service-icon-wrap">
+          <i class="fas fa-truck"></i>
+        </div>
+        <div class="service-body">
+          <h3>Sand & Gravel Transport</h3>
+          <p>Reliable bulk material haulage using our fleet of tipper lorries. Sand, gravel, quarry dust, and construction material delivered on time.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> 4-cube tipper lorry</li>
+            <li><i class="fas fa-check"></i> Island-wide delivery</li>
+            <li><i class="fas fa-check"></i> Scheduled & on-demand</li>
+          </ul>
+          <a href="#transport" class="service-link">VIEW FLEET <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-num">04</div>
+      </div>
+
+      <div class="service-card" data-cat="excavator">
+        <div class="service-icon-wrap">
+          <i class="fas fa-tractor"></i>
+        </div>
+        <div class="service-body">
+          <h3>Excavator Services</h3>
+          <p>Precision excavation, trenching, tree removal, and site preparation using modern hydraulic excavators operated by experienced professionals.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Excavation & trenching</li>
+            <li><i class="fas fa-check"></i> Tree & root removal</li>
+            <li><i class="fas fa-check"></i> Pond & tank digging</li>
+          </ul>
+          <a href="#excavator" class="service-link">SEE PROJECTS <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-num">05</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS — ROAD CONCRETING -->
+<section id="projects" class="section projects-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">ROAD CONCRETING</span>
+      <h2 class="section-title">COMPLETED PROJECTS</h2>
+      <div class="title-bar"></div>
+      <p class="section-desc">Live updates of our ongoing and recently completed road construction projects across Sri Lanka.</p>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+      <!-- Project cards inserted by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- BUILDING PROJECTS -->
+<section id="building-projects" class="section building-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">CONSTRUCTION</span>
+      <h2 class="section-title">BUILDING PROJECTS</h2>
+      <div class="title-bar"></div>
+    </div>
+    <div class="projects-grid" id="buildingGrid"></div>
+  </div>
+</section>
+
+<!-- EXCAVATOR PROJECTS -->
+<section id="excavator" class="section excavator-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">HEAVY EQUIPMENT</span>
+      <h2 class="section-title">EXCAVATOR PROJECTS</h2>
+      <div class="title-bar"></div>
+      <p class="section-desc">Precision excavation for channels, ponds, land clearing, and site preparation using modern hydraulic excavators.</p>
+    </div>
+    <div class="projects-grid" id="excavatorGrid"></div>
+  </div>
+</section>
+
+<!-- LAND DEVELOPMENT -->
+<section id="land-projects" class="section land-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">LAND DEVELOPMENT</span>
+      <h2 class="section-title">OTHER PROJECTS</h2>
+      <div class="title-bar"></div>
+      <p class="section-desc">Large-scale land clearing, embankment and filling projects — transforming terrain into opportunity.</p>
+    </div>
+    <div class="projects-grid" id="landGrid"></div>
+  </div>
+</section>
+
+<!-- OTHER SERVICES -->
+<section id="transport" class="section transport-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">OUR FLEET & EQUIPMENT</span>
+      <h2 class="section-title">OTHER SERVICES</h2>
+      <div class="title-bar"></div>
+      <p class="section-desc">Heavy equipment and transport solutions available for hire island-wide.</p>
+    </div>
+
+    <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+
+      <!-- 01: Tipper Lorry -->
+      <div class="service-card" data-cat="transport">
+        <div class="service-icon-wrap"><i class="fas fa-truck"></i></div>
+        <div class="service-body">
+          <div class="service-photo-wrap" style="margin-bottom:14px; border-radius:8px; overflow:hidden; height:160px;">
+            <img src="assets/vehicles/lorry.png" alt="KGS Tipper Lorry"
+              style="width:100%; height:100%; object-fit:cover;"
+              onerror="this.parentElement.style.display='none'"/>
+          </div>
+          <h3>Sand & Gravel Tipper Lorry</h3>
+          <p>Our 4-cube tipper lorry is available island-wide for transporting sand, gravel, quarry dust, soil, and all bulk construction materials. On-time delivery guaranteed.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> 4 cubic meter capacity</li>
+            <li><i class="fas fa-check"></i> Island-wide delivery</li>
+            <li><i class="fas fa-check"></i> Scheduled & on-demand hire</li>
+          </ul>
+          <a href="#contact" class="service-link">HIRE NOW <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-num">01</div>
+      </div>
+
+      <!-- 02: CAT 120 Excavator -->
+      <div class="service-card" data-cat="excavator">
+        <div class="service-icon-wrap"><i class="fas fa-tractor"></i></div>
+        <div class="service-body">
+          <div class="service-photo-wrap" style="margin-bottom:14px; border-radius:8px; overflow:hidden; height:160px;">
+            <img src="assets/vehicles/cat120.png" alt="120 CAT Excavator"
+              style="width:100%; height:100%; object-fit:cover;"
+              onerror="this.parentElement.style.display='none'"/>
+          </div>
+          <h3>120 CAT Excavator</h3>
+          <p>Our 120 CAT hydraulic excavator is available for excavation, trenching, land clearing, pond digging, and all earthmoving work. Operated by experienced professionals.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Excavation & trenching</li>
+            <li><i class="fas fa-check"></i> Pond & channel digging</li>
+            <li><i class="fas fa-check"></i> Tree & root removal</li>
+          </ul>
+          <div style="margin-top:12px; padding:8px 0; border-top:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:space-between;">
+            <span style="font-size:12px; opacity:0.6;">Rate</span>
+            <span style="font-size:15px; font-weight:600; color:#f0a500;">Rs. 8,000 / hr</span>
+          </div>
+          <a href="#contact" class="service-link">HIRE NOW <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-num">02</div>
+      </div>
+
+      <!-- 03: Cement Mixer -->
+      <div class="service-card" data-cat="concrete">
+        <div class="service-icon-wrap"><i class="fas fa-cogs"></i></div>
+        <div class="service-body">
+          <div class="service-photo-wrap" style="margin-bottom:14px; border-radius:8px; overflow:hidden; height:160px;">
+            <img src="assets/vehicles/mixer.png" alt="Cement Concrete Mixer"
+              style="width:100%; height:100%; object-fit:cover;"
+              onerror="this.parentElement.style.display='none'"/>
+          </div>
+          <h3>Cement Concrete Mixer</h3>
+          <p>Our 1-bag concrete mixer is available for daily hire for road concreting, foundations, columns, and slab work on any construction project.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Road & slab concreting</li>
+            <li><i class="fas fa-check"></i> Foundation & column work</li>
+            <li><i class="fas fa-check"></i> Available island-wide</li>
+          </ul>
+          <div style="margin-top:12px; padding:8px 0; border-top:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:space-between;">
+            <span style="font-size:12px; opacity:0.6;">Rate</span>
+            <span style="font-size:15px; font-weight:600; color:#f0a500;">Rs. 3,500 / day</span>
+          </div>
+          <a href="#contact" class="service-link">HIRE NOW <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-num">03</div>
+      </div>
+
+      <!-- 04: Road Roller -->
+      <div class="service-card" data-cat="land">
+        <div class="service-icon-wrap"><i class="fas fa-drum-steelpan"></i></div>
+        <div class="service-body">
+          <div class="service-photo-wrap" style="margin-bottom:14px; border-radius:8px; overflow:hidden; height:160px;">
+            <img src="assets/vehicles/roller.png" alt="1-Ton Road Roller"
+              style="width:100%; height:100%; object-fit:cover;"
+              onerror="this.parentElement.style.display='none'"/>
+          </div>
+          <h3>1-Ton Road Roller</h3>
+          <p>Our 1-ton road roller is available for compaction work on road bases, subgrades, and embankments. Essential for a solid, uniform foundation for any paved surface.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Road base compaction</li>
+            <li><i class="fas fa-check"></i> Subgrade preparation</li>
+            <li><i class="fas fa-check"></i> Embankment & land filling</li>
+          </ul>
+          <div style="margin-top:12px; padding:8px 0; border-top:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:space-between;">
+            <span style="font-size:12px; opacity:0.6;">Rate</span>
+            <span style="font-size:15px; font-weight:600; color:#f0a500;">Rs. 6,000 / day</span>
+          </div>
+          <a href="#contact" class="service-link">HIRE NOW <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-num">04</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">GET IN TOUCH</span>
+      <h2 class="section-title">CONTACT US</h2>
+      <div class="title-bar"></div>
+    </div>
+    <div class="contact-layout">
+      <div class="contact-info">
+        <h3>KGS Construction & Transport</h3>
+        <p>Ready to start your project? Contact us today for a free consultation and quote.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <strong>Phone</strong>
+              <span>+94 XX XXX XXXX</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <strong>Email</strong>
+              <span>info@kgsconstruction.lk</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <strong>Location</strong>
+              <span>Sri Lanka</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="Full Name" required/>
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+94 XX XXX XXXX"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Service Required</label>
+          <select>
+            <option value="">Select a service...</option>
+            <option>Road Concreting</option>
+            <option>Building Construction</option>
+            <option>Land Development</option>
+            <option>Sand & Gravel Transport</option>
+            <option>Excavator Services</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Describe your project requirements..." rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn-primary full-width">SEND MESSAGE <i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="KGS" class="footer-logo" onerror="this.style.display='none'"/>
+        <div>
+          <div class="footer-name">KGS CONSTRUCTION & TRANSPORT</div>
+          <div class="footer-tagline">Building Sri Lanka's Future</div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>SERVICES</h4>
+          <ul>
+            <li><a href="#projects">Road Concreting</a></li>
+            <li><a href="#building-projects">Building Construction</a></li>
+            <li><a href="#land-projects">Land Development</a></li>
+            <li><a href="#transport">Transport</a></li>
+            <li><a href="#excavator">Excavator</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>QUICK LINKS</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 KGS Construction & Transport. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose"><i class="fas fa-times"></i></button>
+  <button class="lb-prev" id="lbPrev"><i class="fas fa-chevron-left"></i></button>
+  <button class="lb-next" id="lbNext"><i class="fas fa-chevron-right"></i></button>
+  <div class="lb-content">
+    <img src="" alt="" id="lbImg"/>
+    <div class="lb-caption" id="lbCaption"></div>
+    <div class="lb-counter" id="lbCounter"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
