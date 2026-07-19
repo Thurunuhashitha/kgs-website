@@ -11,7 +11,7 @@ const concreteProjects = [
     name: "Senanayakapura Road Concreting",
     location: "Senanayakapura GN Division",
     status: "completed",
-    photos: [
+    photos: [ 
       "assets/ROAD CONCRETING/Senanayakapura GN Division/Senanayakapura01.jpg",
       "assets/ROAD CONCRETING/Senanayakapura GN Division/Senanayakapura02.jpg",
       "assets/ROAD CONCRETING/Senanayakapura GN Division/Senanayakapura03.jpg",
@@ -21,6 +21,18 @@ const concreteProjects = [
       "assets/ROAD CONCRETING/Senanayakapura GN Division/Senanayakapura07.jpg",
     ],
     totalPhotos: 7,
+  },
+  {
+    id: "saddhathissapura",
+    name: "Saddhathissapura Road Concreting",
+    location: "Saddhathissapura GN Division",
+    status: "Ongoing",
+    photos: [
+      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura01.jpg",
+      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura02.jpg",
+      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura03.jpg", 
+    ],
+    totalPhotos: 3,
   },
 ];
 
@@ -76,10 +88,9 @@ const excavatorProjects = [
     location: "Buddhangala",
     status: "completed",
     photos: [
-      "assets/EXCAVATOR PROJECTS/Nawagampura tank/biddhangala_tank01.jpg",
-      "assets/EXCAVATOR PROJECTS/Nawagampura tank/biddhangala_tank02.jpg",
+      "assets/EXCAVATOR PROJECTS/Nawagampura tank/biddhangala_tank01.jpg", 
     ],
-    totalPhotos: 2,
+    totalPhotos: 1,
   },
   {
     id: "clearing-batticaloa",
@@ -87,11 +98,9 @@ const excavatorProjects = [
     location: "Batticaloa Area",
     status: "completed",
     photos: [
-      "assets/EXCAVATOR PROJECTS/Clearing-batticaloa/batticaloa_clear01.jpg",
-      "assets/EXCAVATOR PROJECTS/Clearing-batticaloa/batticaloa_clear02.jpg",
-      "assets/EXCAVATOR PROJECTS/Clearing-batticaloa/batticaloa_clear03.jpg",
+      "assets/EXCAVATOR PROJECTS/Clearing-batticaloa/batticaloa_clear01.jpg", 
     ],
-    totalPhotos: 9,
+    totalPhotos: 1,
   },
 ];
 
