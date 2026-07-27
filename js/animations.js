@@ -20,29 +20,6 @@ function runHeroAnimations() {
   });
 }
 
-// HERO PARTICLES
-function spawnParticles() {
-  const container = document.getElementById("heroParticles");
-  if (!container) return;
-
-  for (let i = 0; i < 20; i++) {
-    const p    = document.createElement("div");
-    p.className = "hero-particle";
-    const size = Math.random() * 3 + 1;
-    const left = Math.random() * 100;
-    const dur  = Math.random() * 10 + 12;
-    const del  = Math.random() * 18;
-    const dx   = (Math.random() - 0.5) * 80;
-    p.style.cssText = `
-      width:${size}px; height:${size}px;
-      left:${left}%; bottom:0;
-      --dx:${dx}px;
-      animation-duration:${dur}s;
-      animation-delay:${del}s;
-    `;
-    container.appendChild(p);
-  }
-}
 
 // SCROLL REVEAL (IntersectionObserver)
 function initReveal() {
@@ -58,4 +35,44 @@ function initReveal() {
     { threshold: 0, rootMargin: "0px 0px 0px 0px" }
   );
   document.querySelectorAll(".reveal:not(.visible)").forEach((el) => observer.observe(el));
+}
+
+// AMBIENT ORBS
+function spawnAmbientOrbs() {
+  const container = document.createElement("div");
+  container.className = "ambient-orbs-container";
+  
+  // Colors matching the theme (Gold and deep blue/slate)
+  const colors = ["rgba(212,160,23,0.3)", "rgba(55,65,81,0.5)", "rgba(240,192,64,0.2)"];
+  
+  // Use fewer orbs on mobile for better performance
+  const isMobile = window.innerWidth <= 768;
+  const numOrbs = isMobile ? 2 : 6;
+  
+  for (let i = 0; i < numOrbs; i++) {
+    const orb = document.createElement("div");
+    orb.className = "ambient-orb";
+    
+    // Slightly smaller orbs on mobile
+    const baseSize = isMobile ? 150 : 200;
+    const size = Math.random() * (isMobile ? 150 : 300) + baseSize; 
+    
+    const left = Math.random() * 100;
+    const top = Math.random() * 100;
+    const dur = Math.random() * 10 + 20; // Slower on mobile/desktop for smoother frames
+    const del = Math.random() * 5;
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    
+    orb.style.cssText = `
+      width: ${size}px; height: ${size}px;
+      left: ${left}vw; top: ${top}vh;
+      background: ${color};
+      animation-duration: ${dur}s;
+      animation-delay: ${del}s;
+    `;
+    
+    container.appendChild(orb);
+  }
+  
+  document.body.prepend(container);
 }

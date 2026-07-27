@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   if (typeof runHeroAnimations === "function") runHeroAnimations();
-  if (typeof spawnParticles === "function") spawnParticles();
+  if (typeof spawnAmbientOrbs === "function") spawnAmbientOrbs();
   if (typeof initReveal === "function") initReveal();
 
   // Fallback: force-show any .reveal elements still hidden after 1.5s

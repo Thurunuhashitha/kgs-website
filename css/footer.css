@@ -1,36 +1,63 @@
-/* ===== CONTACT ===== */
-.contact-section { background: var(--dark-2); }
-.contact-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 64px; align-items: start; }
-.contact-info h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 30px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: var(--gold); }
-.contact-info p { color: var(--gray-light); font-size: 15px; line-height: 1.9; margin-bottom: 40px; }
-.contact-items { display: flex; flex-direction: column; gap: 14px; }
-.contact-item { display: flex; align-items: flex-start; gap: 16px; padding: 16px 18px; background: var(--dark-3); border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.04); transition: border-color var(--transition), background var(--transition); }
-.contact-item:hover { border-color: rgba(212,160,23,0.2); background: var(--dark-4); }
-.contact-icon { width: 42px; height: 42px; background: rgba(212,160,23,0.1); border: 1px solid rgba(212,160,23,0.2); display: flex; align-items: center; justify-content: center; color: var(--gold); flex-shrink: 0; border-radius: var(--radius-sm); }
-.contact-item strong { display: block; font-size: 10px; letter-spacing: 1.5px; margin-bottom: 4px; color: var(--white); text-transform: uppercase; }
-.contact-item span { color: var(--gray-light); font-size: 14px; }
+/* =============================================
+   CONTACT & FOOTER (Modernized)
+   ============================================= */
+.contact-section { background: var(--dark); position: relative; }
+.contact-section::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 100% 100%, rgba(212,160,23,0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+.contact-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 80px; align-items: start; }
+.contact-info h3 { font-size: 32px; font-weight: 800; margin-bottom: 20px; color: var(--white); font-family: 'Outfit', sans-serif;}
+.contact-info p { color: var(--gray); font-size: 16px; line-height: 1.8; margin-bottom: 48px; }
+.contact-items { display: flex; flex-direction: column; gap: 16px; }
+.contact-item { 
+  display: flex; align-items: flex-start; gap: 20px; 
+  padding: 24px; background: rgba(255,255,255,0.02); 
+  border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.05); 
+  transition: all var(--transition); 
+}
+.contact-item:hover { border-color: rgba(212,160,23,0.3); background: rgba(255,255,255,0.05); transform: translateX(8px); }
+.contact-icon { width: 48px; height: 48px; background: rgba(212,160,23,0.1); display: flex; align-items: center; justify-content: center; color: var(--gold); flex-shrink: 0; border-radius: 50%; font-size: 18px; }
+.contact-item strong { display: block; font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 6px; color: var(--white); text-transform: uppercase; }
+.contact-item span { color: var(--gray-mid); font-size: 15px; }
 
-/* ===== FORM ===== */
-.contact-form { display: flex; flex-direction: column; gap: 20px; background: var(--dark-3); padding: 40px; border: 1px solid rgba(255,255,255,0.05); border-radius: var(--radius); }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.form-group { display: flex; flex-direction: column; gap: 8px; }
-.form-group label { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; color: var(--gray-mid); text-transform: uppercase; }
-.form-group input, .form-group select, .form-group textarea { background: var(--dark-4); border: 1px solid rgba(255,255,255,0.08); color: var(--white); font-family: 'Barlow', sans-serif; font-size: 15px; padding: 14px 18px; outline: none; transition: border-color var(--transition), box-shadow var(--transition); width: 100%; border-radius: var(--radius-sm); }
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(212,160,23,0.08); }
+/* ===== FORM (Modern Minimal) ===== */
+.contact-form { 
+  display: flex; flex-direction: column; gap: 24px; 
+  background: var(--dark-2); padding: 48px; 
+  border: 1px solid rgba(255,255,255,0.05); 
+  border-radius: var(--radius); 
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.form-group { display: flex; flex-direction: column; gap: 8px; position: relative; }
+.form-group label { font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 1px; color: var(--gray); text-transform: uppercase; }
+.form-group input, .form-group select, .form-group textarea { 
+  background: rgba(255,255,255,0.03); 
+  border: 1px solid rgba(255,255,255,0.1); 
+  color: var(--white); font-family: 'Inter', sans-serif; font-size: 16px; 
+  padding: 16px 20px; outline: none; 
+  transition: all var(--transition); width: 100%; border-radius: var(--radius-sm); 
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { 
+  border-color: var(--gold); 
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 0 0 4px rgba(212,160,23,0.1); 
+}
 .form-group select option { background: var(--dark-3); color: var(--white); }
-.form-group textarea { resize: vertical; min-height: 110px; }
+.form-group textarea { resize: vertical; min-height: 140px; }
 
 /* ===== FOOTER ===== */
-.footer { background: var(--dark); position: relative; }
-.footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); opacity: 0.35; }
-.footer-top { padding: 64px 0 44px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: start; }
-.footer-brand { display: flex; align-items: center; gap: 18px; }
-.footer-logo { height: 56px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(212,160,23,0.15)); }
-.footer-name { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 3px; color: var(--gold); line-height: 1.2; }
-.footer-tagline { font-size: 11px; color: var(--gray); letter-spacing: 1.5px; margin-top: 4px; }
-.footer-links { display: flex; gap: 56px; justify-content: flex-end; }
-.footer-col h4 { font-size: 10px; font-weight: 800; letter-spacing: 3.5px; color: var(--gold); margin-bottom: 22px; text-transform: uppercase; }
-.footer-col ul { display: flex; flex-direction: column; gap: 12px; }
-.footer-col a { font-size: 14px; color: var(--gray-mid); transition: color var(--transition), padding-left var(--transition); display: inline-block; }
-.footer-col a:hover { color: var(--white); padding-left: 4px; }
-.footer-bottom { padding: 22px 0; border-top: 1px solid rgba(255,255,255,0.04); text-align: center; font-size: 12px; color: var(--gray); letter-spacing: 1px; }
+.footer { background: var(--dark-2); position: relative; border-top: 1px solid rgba(255,255,255,0.05); }
+.footer-top { padding: 80px 0 60px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: start; }
+.footer-brand { display: flex; align-items: center; gap: 20px; }
+.footer-logo { height: 64px; width: auto; object-fit: contain; }
+.footer-name { font-family: 'Outfit', sans-serif; font-size: 24px; font-weight: 800; letter-spacing: 2px; color: var(--white); line-height: 1.2; }
+.footer-tagline { font-size: 13px; font-weight: 500; color: var(--gold); letter-spacing: 1px; margin-top: 6px; text-transform: uppercase;}
+.footer-links { display: flex; gap: 80px; justify-content: flex-end; }
+.footer-col h4 { font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 2px; color: var(--white); margin-bottom: 24px; text-transform: uppercase; }
+.footer-col ul { display: flex; flex-direction: column; gap: 16px; }
+.footer-col a { font-size: 15px; font-weight: 500; color: var(--gray); transition: all var(--transition); display: inline-block; }
+.footer-col a:hover { color: var(--gold); transform: translateX(4px); }
+.footer-bottom { padding: 24px 0; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; font-size: 14px; font-weight: 500; color: var(--gray-mid); }
