@@ -1,0 +1,46 @@
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 1100px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 56px; padding-top: calc(var(--nav-h) + 24px); }
+  .hero-right { opacity: 1; transform: none; }
+  .hero-ring { display: none; }
+  .about-layout { grid-template-columns: 1fr; gap: 56px; }
+  .transport-layout { grid-template-columns: 1fr; }
+  .contact-layout { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-links { justify-content: flex-start; }
+}
+
+@media (max-width: 768px) {
+  :root { --nav-h: 64px; }
+  .nav-inner { padding: 0 20px; }
+  .nav-links { position: fixed; top: var(--nav-h); left: 0; right: 0; background: rgba(8,8,8,0.99); backdrop-filter: blur(20px); flex-direction: column; padding: 32px 24px; gap: 24px; transform: translateY(-110%); opacity: 0; transition: transform 0.45s var(--easing), opacity 0.45s ease; border-bottom: 1px solid rgba(212,160,23,0.15); }
+  .nav-links.open { transform: translateY(0); opacity: 1; }
+  .hamburger { display: flex; }
+  .hero-title { font-size: clamp(56px, 16vw, 120px); }
+  .hero-card-grid { grid-template-columns: 1fr 1fr; }
+  .hero-inner { padding: 0 20px; padding-top: calc(var(--nav-h) + 24px); padding-bottom: 60px; }
+  .hero-scroll-indicator { display: none; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form { padding: 24px 18px; }
+  .transport-specs { grid-template-columns: 1fr; }
+  .lb-prev { left: 8px; }
+  .lb-next { right: 8px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .about-highlights { grid-template-columns: 1fr; }
+  .owner-card { flex-direction: column; align-items: center; text-align: center; }
+  .owner-card::before { left: 0; top: 0; right: 0; bottom: auto; width: auto; height: 2px; }
+  .container { padding: 0 20px; }
+  .section { padding: 80px 0; }
+  .hero-trust { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .trust-divider { display: none; }
+  .trust-item { padding-left: 0; }
+  .footer-links { flex-direction: column; gap: 32px; }
+}
+
+@media (max-width: 480px) {
+  .hero-ctas { flex-direction: column; }
+  .btn-primary, .btn-outline { width: 100%; justify-content: center; }
+  .hero-card-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .hsc-num { font-size: 36px; }
+}
