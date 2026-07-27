@@ -26,7 +26,7 @@ const concreteProjects = [
     id: "saddhathissapura",
     name: "Saddhathissapura Road Concreting",
     location: "Saddhathissapura GN Division",
-    status: "Ongoing",
+    status: "ongoing",
     photos: [
       "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura01.jpg",
       "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura02.jpg",
@@ -53,7 +53,7 @@ const buildingProjects = [
       "assets/house_ratnapura02.jpg",
       "assets/house_ratnapura03.jpg",
     ],
-    totalPhotos: 12,
+    totalPhotos: 3,
   },
 ];
 
@@ -74,7 +74,7 @@ const landProjects = [
       "assets/land_keg02.jpg",
       "assets/land_keg03.jpg",
     ],
-    totalPhotos: 10,
+    totalPhotos: 3,
   },
 ];
 
@@ -181,12 +181,13 @@ function renderGrid(containerId, data) {
 // ──────────────────────────────────────────────
 function openLightbox(project) {
   lbImages = [];
-  for (let i = 0; i < project.totalPhotos; i++) {
+  // Only iterate over actual available photos, not totalPhotos
+  project.photos.forEach((src, i) => {
     lbImages.push({
-      src:     project.photos[i % project.photos.length],
-      caption: `${project.name} — Photo ${i + 1} of ${project.totalPhotos}`,
+      src,
+      caption: `${project.name} — Photo ${i + 1} of ${project.photos.length}`,
     });
-  }
+  });
   lbIndex = 0;
   showLbImage();
   document.getElementById("lightbox").classList.add("active");
@@ -271,7 +272,7 @@ function initReveal() {
         }
       });
     },
-    { threshold: 0.08, rootMargin: "0px 0px -30px 0px" }
+    { threshold: 0, rootMargin: "0px 0px 0px 0px" }
   );
   document.querySelectorAll(".reveal:not(.visible)").forEach((el) => observer.observe(el));
 }
@@ -375,13 +376,6 @@ function spawnParticles() {
   }
 }
 
-// ──────────────────────────────────────────────
-// SERVICE CARDS — add reveal class
-// ──────────────────────────────────────────────
-document.querySelectorAll(".service-card").forEach((card, i) => {
-  card.classList.add("reveal");
-  card.style.transitionDelay = `${i * 0.1}s`;
-});
 
 // ──────────────────────────────────────────────
 // INIT
@@ -392,7 +386,22 @@ document.addEventListener("DOMContentLoaded", () => {
   renderGrid("landGrid",      landProjects);
   renderGrid("excavatorGrid", excavatorProjects);
 
+  // Add reveal to service cards BEFORE initReveal so observer catches them
+  document.querySelectorAll(".service-card").forEach((card, i) => {
+    card.classList.add("reveal");
+    card.style.transitionDelay = `${i * 0.1}s`;
+  });
+
   runHeroAnimations();
   spawnParticles();
   initReveal();
+
+  // Fallback: force-show any .reveal elements still hidden after 1.5s
+  // (handles cards already in viewport at load that the observer may miss)
+  setTimeout(() => {
+    document.querySelectorAll(".reveal:not(.visible)").forEach((el) => {
+      el.style.transitionDelay = "0s";
+      el.classList.add("visible");
+    });
+  }, 1500);
 });
