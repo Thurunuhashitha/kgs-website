@@ -10,8 +10,10 @@ const concreteProjects = [
     id: "senanayakapura",
     name: "Senanayakapura Road Concreting",
     location: "Senanayakapura GN Division",
+    price: "Rs. 22.00 Mn",
+    duration: "1 Month",
     status: "completed",
-    photos: [ 
+    photos: [
       "assets/ROAD CONCRETING/Senanayakapura GN Division/Senanayakapura01.jpg",
       "assets/ROAD CONCRETING/Senanayakapura GN Division/Senanayakapura02.jpg",
       "assets/ROAD CONCRETING/Senanayakapura GN Division/Senanayakapura03.jpg",
@@ -26,13 +28,21 @@ const concreteProjects = [
     id: "saddhathissapura",
     name: "Saddhathissapura Road Concreting",
     location: "Saddhathissapura GN Division",
+    price: "Rs. 64.00 Mn",
+    duration: "2 Months",
     status: "ongoing",
     photos: [
       "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura01.jpg",
       "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura02.jpg",
-      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura03.jpg", 
+      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura03.jpg",
+      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura04.jpg",
+      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura05.jpg",
+      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura06.jpg",
+      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura07.jpg",
+      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura08.jpg",
+      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura09.mp4",
     ],
-    totalPhotos: 3,
+    totalPhotos: 9,
   },
 ];
 
@@ -42,12 +52,11 @@ const concreteProjects = [
 const buildingProjects = [
   {
     id: "house-ratnapura",
-    name: "Two-Storey Residence",
-    location: "Ratnapura",
-    size: "2,400 sq.ft",
-    price: "Rs. 7.20 Mn",
-    duration: "9 Months",
-    status: "completed",
+    name: "-",
+    location: "-",
+    price: "-",
+    duration: "-",
+    status: "-",
     photos: [
       "assets/house_ratnapura01.jpg",
       "assets/house_ratnapura02.jpg",
@@ -58,17 +67,14 @@ const buildingProjects = [
 ];
 
 // ──────────────────────────────────────────────
-// DATA — LAND DEVELOPMENT
+// DATA — CIVIL CONSTRUCTION WORKS
 // ──────────────────────────────────────────────
-const landProjects = [
+const civilProjects = [
   {
-    id: "embankment-kegalle",
-    name: "Large Embankment Filling",
-    location: "Kegalle District",
-    size: "3.5 Acres",
-    price: "Rs. 18.00 Mn",
-    duration: "5 Months",
-    status: "completed",
+    id: "civil-drainage",
+    name: "-",
+    location: "-",
+    status: "-",
     photos: [
       "assets/land_keg01.jpg",
       "assets/land_keg02.jpg",
@@ -88,7 +94,7 @@ const excavatorProjects = [
     location: "Buddhangala",
     status: "completed",
     photos: [
-      "assets/EXCAVATOR PROJECTS/Nawagampura tank/biddhangala_tank01.jpg", 
+      "assets/EXCAVATOR PROJECTS/Nawagampura tank/biddhangala_tank01.jpg",
     ],
     totalPhotos: 1,
   },
@@ -98,7 +104,7 @@ const excavatorProjects = [
     location: "Batticaloa Area",
     status: "completed",
     photos: [
-      "assets/EXCAVATOR PROJECTS/Clearing-batticaloa/batticaloa_clear01.jpg", 
+      "assets/EXCAVATOR PROJECTS/Clearing-batticaloa/batticaloa_clear01.jpg",
     ],
     totalPhotos: 1,
   },
@@ -115,8 +121,8 @@ function buildCard(project) {
   const statusLabel = project.status === "completed" ? "Completed" : "Ongoing";
 
   const mainPhoto = project.photos[0] || null;
-  const thumb1    = project.photos[1] || null;
-  const thumb2    = project.photos[2] || null;
+  const thumb1 = project.photos[1] || null;
+  const thumb2 = project.photos[2] || null;
 
   const makeImg = (src) =>
     src
@@ -142,13 +148,27 @@ function buildCard(project) {
         <i class="fas fa-camera"></i> ${project.totalPhotos} Photos
       </div>
     </div>
-    <div class="project-card-body">
-      <div class="project-location"><i class="fas fa-map-marker-alt"></i> ${project.location}</div>
-      <div class="project-name">${project.name}</div>
-      <span class="project-status ${statusClass}">
-        <span class="status-dot"></span>${statusLabel}
-      </span>
+      <div class="project-card-body">
+    <div class="project-location">
+      <i class="fas fa-map-marker-alt"></i> ${project.location}
     </div>
+
+    <div class="project-name">${project.name}</div>
+
+    ${project.price
+      ? `
+        <div class="project-info">
+          <div><i class="fas fa-money-bill-wave"></i> <strong>Price:</strong> ${project.price}</div>
+          <div><i class="fas fa-calendar-alt"></i> <strong>Duration:</strong> ${project.duration}</div>
+        </div>
+      `
+      : ""
+    }
+
+    <span class="project-status ${statusClass}">
+      <span class="status-dot"></span>${statusLabel}
+    </span>
+  </div>
   `;
 
   card.querySelector(".project-card-header").addEventListener("click", () => {
@@ -199,9 +219,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // INIT CORE APP
 // ──────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
-  renderGrid("projectsGrid",  concreteProjects);
-  renderGrid("buildingGrid",  buildingProjects);
-  renderGrid("landGrid",      landProjects);
+  renderGrid("projectsGrid", concreteProjects);
+  renderGrid("buildingGrid", buildingProjects);
+  renderGrid("civilGrid", civilProjects);
   renderGrid("excavatorGrid", excavatorProjects);
 
   // Add reveal to service cards BEFORE initReveal so observer catches them

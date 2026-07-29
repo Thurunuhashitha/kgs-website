@@ -3,7 +3,7 @@
    ============================================= */
 .projects-section { background: var(--dark-2); }
 .building-section { background: var(--dark); }
-.land-section { background: var(--dark-2); }
+.civil-section { background: var(--dark-2); }
 .excavator-section { background: var(--dark); }
 .projects-grid { 
   display: grid; 
@@ -12,6 +12,32 @@
 }
 
 /* ===== PROJECT CARD ===== */
+.project-info {
+    margin: 12px 0;
+    padding: 10px 12px;
+    background: var(--dark-2);
+    border-radius: 8px;
+    border-left: 4px solid var(--gold);
+}
+
+.project-info div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0;
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.project-info i {
+    color: var(--gold);
+    width: 18px;
+}
+
+.project-info strong {
+    color: var(--white);
+}
+
 .project-card {
   background: var(--dark-3); 
   border: 1px solid rgba(255,255,255,0.03);

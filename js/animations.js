@@ -11,7 +11,6 @@ function runHeroAnimations() {
     { id: "hw3",       delay: 600  },
     { id: "heroDesc",  delay: 790  },
     { id: "heroCtas",  delay: 960  },
-    { id: "heroTrust", delay: 1100 },
     { id: "heroRight", delay: 560  }, // slides in alongside the title words
   ];
   steps.forEach(({ id, delay }) => {
