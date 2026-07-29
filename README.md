@@ -15,10 +15,10 @@ This website serves as a professional portfolio to showcase completed projects a
 
 ### 🎨 Design & UX
 - **Responsive Design** - Fully responsive layout that works seamlessly on desktop, tablet, and mobile devices
-- **Modern Aesthetics** - Clean, professional design with smooth animations and transitions
+- **Modern Aesthetics** - Clean, professional dark theme design with smooth animations and transitions
 - **Scroll Reveal Animations** - Elements animate into view as users scroll using IntersectionObserver
-- **Staggered Hero Animations** - Engaging hero section with sequenced text and element animations
-- **Particle Effects** - Animated background particles for visual interest
+- **Typography** - Contemporary look using 'Inter' and 'Outfit' Google Fonts
+- **Ambient Orbs** - Animated background orbs for enhanced visual appeal
 
 ### 📸 Project Gallery
 - **Project Cards** - Elegant card layout displaying project information and photos
@@ -43,13 +43,13 @@ This website serves as a professional portfolio to showcase completed projects a
 ```
 kgs-website/
 ├── index.html          # Main HTML file with page structure
-├── app.js              # JavaScript for interactivity and functionality
-├── style.css           # All styling and animations
+├── css/                # CSS styling files (style, hero, navbar, etc.)
+├── js/                 # JavaScript modules (app, animations, gallery, etc.)
 ├── assets/             # Project photos and images
 │   ├── ROAD CONCRETING/
 │   ├── EXCAVATOR PROJECTS/
 │   └── [other project folders]
-└── README.md          # This file
+└── README.md           # This file
 ```
 
 ## File Descriptions
@@ -63,29 +63,19 @@ Main HTML file containing:
 - Contact form
 - Footer with company information
 
-### `app.js`
-Core JavaScript functionality:
-- **Project Data** - Arrays containing project information (concrete, building, land, excavator projects)
-- **Card Building** - Dynamic project card generation with status indicators
-- **Lightbox** - Interactive photo gallery with keyboard navigation
-- **Navbar Scroll Effects** - Dynamic navbar styling based on scroll position
-- **Mobile Navigation** - Hamburger menu toggle functionality
-- **Scroll Reveal** - IntersectionObserver-based element animations
-- **Active Link Tracking** - Updates navigation highlighting based on visible section
-- **Contact Form** - Form submission handling with success feedback
-- **Hero Animations** - Sequenced animation system for hero section elements
-- **Particle Effects** - Dynamic background particle generation
+### `js/` Directory
+Core JavaScript functionality split into modules:
+- **`app.js`** - Main entry point and project data arrays
+- **`navigation.js`** - Navbar scroll effects, active link tracking, and mobile menu toggle
+- **`animations.js`** - Scroll reveal, ambient orbs, and hero section animations
+- **`gallery.js`** - Interactive lightbox and dynamic project card generation
 
-### `style.css`
-Comprehensive styling including:
-- CSS Custom Properties (variables) for colors and spacing
-- Responsive grid layouts
-- Smooth animations and transitions
-- Hero section styling with staggered animations
-- Card component styling
-- Lightbox styling
-- Mobile-first responsive design
-- Accessibility considerations
+### `css/` Directory
+Comprehensive modular styling including:
+- **`style.css`** - Core CSS Custom Properties (variables), typography, and base styles
+- **`hero.css`, `navbar.css`, `footer.css`** - Component-specific styles
+- **`services.css`, `projects.css`** - Section-specific grid layouts and component styling
+- **`responsive.css`** - Mobile-first media queries and accessibility adjustments
 
 ## Browser Compatibility
 
@@ -118,7 +108,7 @@ Then open `http://localhost:8000` in your browser.
 
 ### Adding New Projects
 
-Edit the project arrays in `app.js`:
+Edit the project arrays in `js/app.js`:
 
 ```javascript
 const concreteProjects = [
@@ -137,7 +127,7 @@ The page will automatically render new project cards with the correct structure.
 
 ### Modifying Colors & Styling
 
-Edit CSS custom properties in `style.css`:
+Edit CSS custom properties in `css/style.css`:
 
 ```css
 :root {
@@ -201,5 +191,5 @@ For questions or issues regarding this website, contact the development team or 
 
 ---
 
-**Last Updated:** June 2026  
-**Version:** 1.0
+**Last Updated:** July 2026  
+**Version:** 1.1
