@@ -14,13 +14,13 @@ const concreteProjects = [
     duration: "1 Month",
     status: "completed",
     photos: [
-      "assets/ROAD CONCRETING/Senanayakapura GN Division/Senanayakapura01.jpg",
-      "assets/ROAD CONCRETING/Senanayakapura GN Division/Senanayakapura02.jpg",
-      "assets/ROAD CONCRETING/Senanayakapura GN Division/Senanayakapura03.jpg",
-      "assets/ROAD CONCRETING/Senanayakapura GN Division/Senanayakapura04.jpg",
-      "assets/ROAD CONCRETING/Senanayakapura GN Division/Senanayakapura05.jpg",
-      "assets/ROAD CONCRETING/Senanayakapura GN Division/Senanayakapura06.jpg",
-      "assets/ROAD CONCRETING/Senanayakapura GN Division/Senanayakapura07.jpg",
+      "assets/road-concreting/senanayakapura/senanayakapura01.jpg",
+      "assets/road-concreting/senanayakapura/senanayakapura02.jpg",
+      "assets/road-concreting/senanayakapura/senanayakapura03.jpg",
+      "assets/road-concreting/senanayakapura/senanayakapura04.jpg",
+      "assets/road-concreting/senanayakapura/senanayakapura05.jpg",
+      "assets/road-concreting/senanayakapura/senanayakapura06.jpg",
+      "assets/road-concreting/senanayakapura/senanayakapura07.jpg",
     ],
     totalPhotos: 7,
   },
@@ -32,17 +32,16 @@ const concreteProjects = [
     duration: "2 Months",
     status: "ongoing",
     photos: [
-      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura01.jpg",
-      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura02.jpg",
-      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura03.jpg",
-      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura04.jpg",
-      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura05.jpg",
-      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura06.jpg",
-      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura07.jpg",
-      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura08.jpg",
-      "assets/ROAD CONCRETING/Saddhathissapura GN Division/Saddhathissapura09.mp4",
+      "assets/road-concreting/saddhathissapura/Saddhathissapura01.jpg",
+      "assets/road-concreting/saddhathissapura/Saddhathissapura02.jpg",
+      "assets/road-concreting/saddhathissapura/Saddhathissapura03.jpg",
+      "assets/road-concreting/saddhathissapura/Saddhathissapura04.jpg",
+      "assets/road-concreting/saddhathissapura/Saddhathissapura05.jpg",
+      "assets/road-concreting/saddhathissapura/Saddhathissapura06.jpg",
+      "assets/road-concreting/saddhathissapura/Saddhathissapura07.jpg",
+      "assets/road-concreting/saddhathissapura/Saddhathissapura08.jpg",
     ],
-    totalPhotos: 9,
+    totalPhotos: 8,
   },
 ];
 
@@ -50,38 +49,14 @@ const concreteProjects = [
 // DATA — BUILDING PROJECTS
 // ──────────────────────────────────────────────
 const buildingProjects = [
-  {
-    id: "house-ratnapura",
-    name: "-",
-    location: "-",
-    price: "-",
-    duration: "-",
-    status: "-",
-    photos: [
-      "assets/house_ratnapura01.jpg",
-      "assets/house_ratnapura02.jpg",
-      "assets/house_ratnapura03.jpg",
-    ],
-    totalPhotos: 3,
-  },
+  // Photos coming soon — add images to assets/building-projects/ and list them here
 ];
 
 // ──────────────────────────────────────────────
 // DATA — CIVIL CONSTRUCTION WORKS
 // ──────────────────────────────────────────────
 const civilProjects = [
-  {
-    id: "civil-drainage",
-    name: "-",
-    location: "-",
-    status: "-",
-    photos: [
-      "assets/land_keg01.jpg",
-      "assets/land_keg02.jpg",
-      "assets/land_keg03.jpg",
-    ],
-    totalPhotos: 3,
-  },
+  // Photos coming soon — add images to assets/civil-projects/ and list them here
 ];
 
 // ──────────────────────────────────────────────
@@ -94,7 +69,7 @@ const excavatorProjects = [
     location: "Buddhangala",
     status: "completed",
     photos: [
-      "assets/EXCAVATOR PROJECTS/Nawagampura tank/biddhangala_tank01.jpg",
+      "assets/excavator-projects/nawagampura-tank/biddhangala_tank01.jpg",
     ],
     totalPhotos: 1,
   },
@@ -104,7 +79,7 @@ const excavatorProjects = [
     location: "Batticaloa Area",
     status: "completed",
     photos: [
-      "assets/EXCAVATOR PROJECTS/Clearing-batticaloa/batticaloa_clear01.jpg",
+      "assets/excavator-projects/clearing-batticaloa/batticaloa_clear01.jpg",
     ],
     totalPhotos: 1,
   },
@@ -186,6 +161,12 @@ function renderGrid(containerId, data) {
   const grid = document.getElementById(containerId);
   if (!grid) return;
   grid.innerHTML = "";
+
+  if (data.length === 0) {
+    grid.innerHTML = `<p class="coming-soon-msg"><i class="fas fa-clock"></i> Projects coming soon...</p>`;
+    return;
+  }
+
   data.forEach((project, i) => {
     const card = buildCard(project);
     card.style.transitionDelay = `${i * 0.12}s`;

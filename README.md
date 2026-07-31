@@ -46,9 +46,18 @@ kgs-website/
 ├── css/                # CSS styling files (style, hero, navbar, etc.)
 ├── js/                 # JavaScript modules (app, animations, gallery, etc.)
 ├── assets/             # Project photos and images
-│   ├── ROAD CONCRETING/
-│   ├── EXCAVATOR PROJECTS/
-│   └── [other project folders]
+│   ├── road-concreting/
+│   │   ├── senanayakapura/
+│   │   └── saddhathissapura/
+│   ├── excavator-projects/
+│   │   ├── nawagampura-tank/
+│   │   └── clearing-batticaloa/
+│   ├── building-projects/
+│   ├── civil-projects/
+│   ├── owner/
+│   ├── vehicles/
+│   ├── logo.png
+│   └── logo1.png
 └── README.md           # This file
 ```
 
@@ -192,4 +201,4 @@ For questions or issues regarding this website, contact the development team or 
 ---
 
 **Last Updated:** July 2026  
-**Version:** 1.1
+**Version:** 1.2
